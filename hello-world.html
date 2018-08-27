@@ -25,12 +25,19 @@
   // create an element
   
   // create a functional component
- const BasicComponent = props => <h1 className="header">Hello World</h1>;
+ const BasicComponent = props => <h1 className="header">Hello {props.name}</h1>;
+ const BasicButton = props => <button className="basic-button">Click Me, {props.name}</button>
+
+ const BasicInput = props => {
+   return <input type="text" placeholder={"enter some stuff " + props.name} />
+ }
 
   // create an App component
   const App = props => (
     <div>
-      <BasicComponent />
+      <BasicComponent name={props.name} />
+      <BasicButton name={props.name} />
+      <BasicInput name={props.name}/>
     </div>
   )
 
@@ -41,7 +48,7 @@
   // render basiccomponent -->> ReactDOM.render(BasicComponent(), document.getElementById('target')); <<--
   // render the App component
 
-  ReactDOM.render(<App />, document.getElementById('target'));
+  ReactDOM.render(<App name="Tom" />, document.getElementById('target'));
 
 </script>
 </html>
