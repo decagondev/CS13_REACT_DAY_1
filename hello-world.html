@@ -20,6 +20,9 @@
 
 <!-- User Script -->
 <script type="text/babel">
+
+  //imports
+  // when we are in a project -->> import BasicInput from './BasicInput.js'; <<--
   // old element -->> const myElement =  <h1 className="header">Hello World</h1>; <<--
 
   // create an element
@@ -28,9 +31,9 @@
  const BasicComponent = props => <h1 className="header">Hello {props.name}</h1>;
  const BasicButton = props => <button className="basic-button">Click Me, {props.name}</button>
 
- const BasicInput = props => {
-   return <input type="text" placeholder={"enter some stuff " + props.name} />
- }
+const BasicInput = props => {
+      return <input type="text" placeholder={"enter some stuff " + props.name} />
+}
 
   // create an App component
   const App = props => (
