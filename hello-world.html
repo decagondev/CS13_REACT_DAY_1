@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello World React</title>
+</head>
+<body>
+  <div id="target"></div>
+</body>
+<!-- React library CDN -->
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+
+<!-- ReactDOM library CDN -->
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+<!-- User Script -->
+<script>
+  const myElement = React.createElement('h1', {className: 'heading'}, 'Hello World');
+  ReactDOM.render(myElement, document.getElementById('target'));
+</script>
+</html>
