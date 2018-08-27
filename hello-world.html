@@ -20,12 +20,28 @@
 
 <!-- User Script -->
 <script type="text/babel">
+  // old element -->> const myElement =  <h1 className="header">Hello World</h1>; <<--
 
   // create an element
-  const myElement =  <h1 className="header">Hello World</h1>;
   
+  // create a functional component
+  // basic component -->> const BasicComponent = props => <h1 className="header">Hello World</h1>; <<--
+
+  // create an App component
+  const App = props => (
+    <div>
+      // TODO: components go here
+    </div>
+  )
+
   // render the element to the dom using ReactDOM.render()
-  ReactDOM.render(myElement, document.getElementById('target'));
+  // old render line -->> ReactDOM.render(myElement, document.getElementById('target')); <<--
+
+  // render by calling the BasicComponent() function
+  // render basiccomponent -->> ReactDOM.render(BasicComponent(), document.getElementById('target')); <<--
+  // render the App component
+
+  ReactDOM.render(<App />, document.getElementById('target'));
 
 </script>
 </html>
